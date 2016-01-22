@@ -1,0 +1,334 @@
+    <!DOCTYPE html> <!-- phgwpi APPS -->
+    
+    <html>
+    
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="AYP, Aprende y puntúa en tu visita cultural a Granada." />
+	<link rel="shortcut icon" href="docu/images/ayp.ico">	  
+   <title>AYP: Aprende y puntúa</title>    
+      <link rel="stylesheet" href="docu/ayp.css" /> 
+    <script src="docu/ayp.js"></script>
+    
+    <script src="docu/jquery.min.js"></script>
+	<script src="docu/jquery.screwdefaultbuttonsV2.js"></script>
+
+    <script type="text/javascript">
+		$(function(){
+		
+			$('input:radio').screwDefaultButtons({
+				image: 'url("docu/images/radioSmall.jpg")',
+				width: 43,
+				height: 43
+			});
+							
+		});
+	</script> 
+    
+  
+
+   </head>
+	       
+	<body onload="initClock()">		    
+		
+		<header id="inicio">	
+		    <h2>Aprende y Punt&uacute;a</h2> 
+                  
+        <div id="cronometro">
+        <div class="number">
+	   <span id="Hours" />
+       </div>
+
+        <div class="number">
+	   <span id="Minutes" />
+       </div>
+
+       <div class="number">
+	   <span id="Seconds" />
+       </div> 
+        </div>
+
+        <div>
+   	<a class="botoniniciar" href="#" id="botonClock" onclick="pauseClock();" >
+        <input class="botoniniciar" type="submit"  value="Pausar"></a>
+        <a href="#" id="botonClock" onclick="resetClock();">
+        <input class="botoncronometro" type="submit"  value="Reset"></a>
+        </div>  
+     
+    </header>	
+
+    <section>
+    	      
+	<form name="preguntas">
+	<ol>
+	<li>La Alhambra ha sido creada a lo largo de más de seiscientos años por diversas culturas:</li>
+
+	<input type="radio" name="pregunta1" id="p11" value="A"> Árabe, Hebrea y Morisca..<br />
+	<input type="radio" name="pregunta1" id="p12" value="B"> Musulmana, Renacentista y Romántica.<br />	
+	<input type="radio" name="pregunta1" id="p13" value="C"> Mozárabe, Católica y Apostólica.<br />
+	<input type="radio" name="pregunta1" id="p14" value="D"> Nazarí, Zirí y Califal.<br /> 
+	
+	<li>Elija la correcta en relación a la Catedral de Granada:</li>
+	<input type="radio" name="pregunta2" id="p21" value="A">Es una catedral Churrigueresca.<br />
+	<input type="radio" name="pregunta2" id="p22" value="B">Es un templo Románico.<br />  
+	<input type="radio" name="pregunta2" id="p23" value="C">De las dos torres proyectadas sólo se construyó una.<br />  
+	<input type="radio" name="pregunta2" id="p24" value="D">Es Mozárabe.  
+	
+
+	<li>Estilo de la Capilla Real:</li>
+	<input type="radio" name="pregunta3" id="p31" value="A">Gótico fernandino.<br /> 
+	<input type="radio" name="pregunta3" id="p32" value="B">Gótico isabelino.<br />  
+	<input type="radio" name="pregunta3" id="p33" value="C">Gótico filipino.<br />  
+	<input type="radio" name="pregunta3" id="p34" value="D">Morisco.<br />  	
+	
+	<li>Respecto al Parque de las Ciencias señale la respuesta falsa:</li>
+	<input type="radio" name="pregunta4" id="p41" value="A">En la Sala Biosfera puede seguir el movimiento de las pirañas.<br /> 
+	<input type="radio" name="pregunta4" id="p42" value="B">Puede subir a la Torre de observación de 500 m de altura.<br />  
+	<input type="radio" name="pregunta4" id="p43" value="C">Podrá visitar un mariposario tropical.<br />  
+	<input type="radio" name="pregunta4" id="p44" value="D">En el planetario puede hacer un viaje al universo en 360º.<br />		
+	
+	<li>El Observatorio astronómico de Sierra Nevada se encuentra:</li>
+	<input type="radio" name="pregunta5" id="p51" value="A">En el Mulhacén a 3400 metros.<br /> 
+	<input type="radio" name="pregunta5" id="p52" value="B">En Sierra Nevada no hay observatorio astronómico.<br />  
+	<input type="radio" name="pregunta5" id="p53" value="C">En la Loma de Dílar a 2.900 metros.<br />  
+	<input type="radio" name="pregunta5" id="p54" value="D">En la Loma de Dílar a 2.000 metros.<br />
+	
+	<li>La longitud total de pistas balizadas en Sierra Nevada es de:</li>
+	<input type="radio" name="pregunta6" id="p61" value="A">120 Km.<br /> 
+	<input type="radio" name="pregunta6" id="p62" value="B">50 Km.<br />  
+	<input type="radio" name="pregunta6" id="p63" value="C">Superficie de 280 Ha.<br />  
+	<input type="radio" name="pregunta6" id="p64" value="D">106,8 Km.<br />
+	
+	<li>La fortaleza del S. XI  origen de la Alhambra se denominó:</li>
+	<input type="radio" name="pregunta7" id="p71" value="A">La Roja.<br /> 
+	<input type="radio" name="pregunta7" id="p72" value="B">AlHamra.<br />  
+	<input type="radio" name="pregunta7" id="p73" value="C">El Rojas.<br />  
+	<input type="radio" name="pregunta7" id="p74" value="D">Primera y segunda.<br />
+	
+	<li>Reyes que mandaron construir los palacios nazaries:</li>
+	<input type="radio" name="pregunta8" id="p81" value="A">Yusuf III y Mohamé.<br /> 
+	<input type="radio" name="pregunta8" id="p82" value="B">Yusuf I y Muhammad V.<br />  
+	<input type="radio" name="pregunta8" id="p83" value="C">Felipe el hermoso y Doña Urraca.<br />  
+	<input type="radio" name="pregunta8" id="p84" value="D">Los Reyes Catódicos..<br />
+	
+	<li>El museo de Bellas Artes de Granada se encuentra en:</li>
+	<input type="radio" name="pregunta9" id="p91" value="A">Palacio de Carlos V.<br /> 
+	<input type="radio" name="pregunta9" id="p92" value="B">La Chancillería.<br />  
+	<input type="radio" name="pregunta9" id="p93" value="C">Palacio de Carlos III.<br />  
+	<input type="radio" name="pregunta9" id="p94" value="D">La Cartuja.<br />
+	
+	<li>Apodo de Fray Leopoldo:</li>
+	<input type="radio" name="pregunta10" id="p101" value="A">El Cura Bueno.<br /> 
+	<input type="radio" name="pregunta10" id="p102" value="B">El Curaçao.<br />  
+	<input type="radio" name="pregunta10" id="p103" value="C">El Limosnero.<br />  
+	<input type="radio" name="pregunta10" id="p104" value="D">Barbas blancas.<br />		
+	
+	<li>La dinastía zirí granadina hay que situarla en:</li>
+	<input type="radio" name="pregunta11" id="p111" value="A">Sacromonte S XI.<br /> 
+	<input type="radio" name="pregunta11" id="p112" value="B">Albaycín S XIV.<br />  
+	<input type="radio" name="pregunta11" id="p113" value="C">Albaycín S XI.<br />  
+	<input type="radio" name="pregunta11" id="p114" value="D">Cartuja S XX.<br />
+	
+	<li>¿Cómo se denomina la edificación donde se ubica el Museo Arqueológico de Granada?</li>
+	<input type="radio" name="pregunta12" id="p121" value="A">Casa de Bernarda Alba.<br /> 
+	<input type="radio" name="pregunta12" id="p122" value="B">Casa Don PePe.<br />  
+	<input type="radio" name="pregunta12" id="p123" value="C">Casa de Castril.<br />  
+	<input type="radio" name="pregunta12" id="p124" value="D">Casa Nova.<br />
+	
+	<li>Para contemplar los cuadros tenebristas de Sánchez Cotán hay que ir al:</li>
+	<input type="radio" name="pregunta13" id="p131" value="A">Museo Vaticano granadino.<br /> 
+	<input type="radio" name="pregunta13" id="p132" value="B">La Capilla Real.<br />  
+	<input type="radio" name="pregunta13" id="p133" value="C">Iglesia de San Nicolás.<br />  
+	<input type="radio" name="pregunta13" id="p134" value="D">Monasterio de la Cartuja.<br />
+	
+	<li>¿En qué importante edificio histórico se encuentra la sede del Tribunal Superior de Justicia de Andalucía TSJA?</li>
+	<input type="radio" name="pregunta14" id="p141" value="A">Facultad de Derecho.<br /> 
+	<input type="radio" name="pregunta14" id="p142" value="B">Facultad de Bellas Artes.<br />  
+	<input type="radio" name="pregunta14" id="p143" value="C">Chancillería.<br />  
+	<input type="radio" name="pregunta14" id="p144" value="D">Palacio de Bobataubín.<br />
+	
+	<li>El Parque de las Ciencias de Andalucía es:</li>
+	<input type="radio" name="pregunta15" id="p151" value="A">Un polígono tecnológico I*D.<br /> 
+	<input type="radio" name="pregunta15" id="p152" value="B">Un museo interactivo.<br />  
+	<input type="radio" name="pregunta15" id="p153" value="C">Una empresa I+D.<br />  
+	<input type="radio" name="pregunta15" id="p154" value="D">Una feria.<br />
+	
+	<li>Definición de zambra.</li>
+	<input type="radio" name="pregunta16" id="p161" value="A">Danza flamenca.<br /> 
+	<input type="radio" name="pregunta16" id="p162" value="B">Plato granadino.<br />  
+	<input type="radio" name="pregunta16" id="p163" value="C">Famoso cocktail granadino.<br />  
+	<input type="radio" name="pregunta16" id="p164" value="D">Barrio granadino junto al Sacromonte.<br />
+	
+	<li>Apodo del último Sultán de Granada.</li>
+	<input type="radio" name="pregunta17" id="p171" value="A">Rey Chiquitín.<br /> 
+	<input type="radio" name="pregunta17" id="p172" value="B">Rey Grande.<br />  
+	<input type="radio" name="pregunta17" id="p173" value="C">Sultanillo.<br />  
+	<input type="radio" name="pregunta17" id="p174" value="D">Rey Chico.<br />
+	
+	<li>La Inmaculada del facistol de la Catedral de Granada es una famosa obra de:</li>
+	<input type="radio" name="pregunta18" id="p181" value="A">Juan Martinez Montañés.<br /> 
+	<input type="radio" name="pregunta18" id="p182" value="B">Pedro de Mena.<br />  
+	<input type="radio" name="pregunta18" id="p183" value="C">Alonso Cano.<br />  
+	<input type="radio" name="pregunta18" id="p184" value="D">José de Mora.<br />
+	
+	<li>La Escuela de Estudios Árabes de Granada se encuentra en:</li>
+	<input type="radio" name="pregunta19" id="p191" value="A">La Redonda.<br /> 
+	<input type="radio" name="pregunta19" id="p192" value="B">El Zaidín.<br />  
+	<input type="radio" name="pregunta19" id="p193" value="C">Casa del Chapiz.<br />  
+	<input type="radio" name="pregunta19" id="p194" value="D">Carmen de los Mártires.<br />
+	
+	<li>¿Dónde se hallaban las estancias privadas del Sultán de la Alhambra?</li>
+	<input type="radio" name="pregunta20" id="p201" value="A">En el palacio del Pórtico.<br /> 
+	<input type="radio" name="pregunta20" id="p202" value="B">En el palacio de los Leones.<br />  
+	<input type="radio" name="pregunta20" id="p203" value="C">En la Torre de Comares.<br />  
+	<input type="radio" name="pregunta20" id="p204" value="D">En la cripta de Carlos V.<br />
+
+    <!--  -->			
+
+   <li>Señale la correcta en relación a la Alhambra del S XIX.</li>
+	<input type="radio" name="pregunta21" id="p211" value="A">Es declarada BIC.<br /> 
+	<input type="radio" name="pregunta21" id="p212" value="B">Las tropas napoleonicas la embellecen.<br />  
+	<input type="radio" name="pregunta21" id="p213" value="C">En 1870 es Monumento Nacional.<br />  
+	<input type="radio" name="pregunta21" id="p214" value="D">Es expropiada al Marqués de Mondéjar.<br />
+	
+	<li>La Madraza es:</li>
+	<input type="radio" name="pregunta22" id="p221" value="A">Un madre buena.<br /> 
+	<input type="radio" name="pregunta22" id="p222" value="B">Una monja enorme.<br />  
+	<input type="radio" name="pregunta22" id="p223" value="C">Un guiso granadino.<br />  
+	<input type="radio" name="pregunta22" id="p224" value="D">Universidad.<br />
+	
+	<li>La fortaleza del S XI origen de la Alhambra se denominó:</li>
+	<input type="radio" name="pregunta23" id="p231" value="A">Alhamra.<br /> 
+	<input type="radio" name="pregunta23" id="p232" value="B">La Roja.<br />  
+	<input type="radio" name="pregunta23" id="p233" value="C">Palacios nazaries.<br />  
+	<input type="radio" name="pregunta23" id="p234" value="D">Primera y segunda.<br />
+	
+	<li>¿Quién dirigió la obra del Monasterio de San Jerónimo?</li>
+	<input type="radio" name="pregunta24" id="p241" value="A">Alonso Cano.<br /> 
+	<input type="radio" name="pregunta24" id="p242" value="B">Diego de Siloé.<br />  
+	<input type="radio" name="pregunta24" id="p243" value="C">Enrique Egas.<br />  
+	<input type="radio" name="pregunta24" id="p244" value="D">Eugène Viollet-le-Duc.<br />
+	
+	<li>¿Dónde se encuentra el museo de Bellas Partes?</li>
+	<input type="radio" name="pregunta25" id="p251" value="A">La Cartuja.<br /> 
+	<input type="radio" name="pregunta25" id="p252" value="B">La Catedral.<br />  
+	<input type="radio" name="pregunta25" id="p253" value="C">Palacio de Carlos V.<br />  
+	<input type="radio" name="pregunta25" id="p254" value="D">Granada no tiene un museo de esos.<br />
+	
+	<li>En el Generalife es Nazarí genuino:</li>
+	<input type="radio" name="pregunta26" id="p261" value="A">El Mirador Romántico.<br /> 
+	<input type="radio" name="pregunta26" id="p262" value="B">Los Jardines Altos.<br />  
+	<input type="radio" name="pregunta26" id="p263" value="C">La Escalera del Agua.<br />  
+	<input type="radio" name="pregunta26" id="p264" value="D">El Patio del Ciprés de la Sultana.<br />
+	
+	<li>Uno de estos libros no es de Federico:</li>
+	<input type="radio" name="pregunta27" id="p271" value="A">Poeta en Nueva York.<br /> 
+	<input type="radio" name="pregunta27" id="p272" value="B">Romancero Gitano.<br />  
+	<input type="radio" name="pregunta27" id="p273" value="C">Yema.<br />  
+	<input type="radio" name="pregunta27" id="p274" value="D">Libro de Poemas.<br />
+	
+	<li>La palabra Madraza proviene del término árabe Medersa que significa:</li>
+	<input type="radio" name="pregunta28" id="p281" value="A">Estudios católicos laicos.<br /> 
+	<input type="radio" name="pregunta28" id="p282" value="B">Estudios musulmanes laicos.<br />  
+	<input type="radio" name="pregunta28" id="p283" value="C">Escuela coránica.<br />  
+	<input type="radio" name="pregunta28" id="p284" value="D">Cultura rabínica.<br />
+	
+	<li>La Abadía del Sacromonte se ubica en el monte denominado:</li>
+	<input type="radio" name="pregunta29" id="p291" value="A">Monte gitano.<br /> 
+	<input type="radio" name="pregunta29" id="p292" value="B">Montaña flamenca.<br />  
+	<input type="radio" name="pregunta29" id="p293" value="C">Monte tablao.<br />  
+	<input type="radio" name="pregunta29" id="p294" value="D">Monte Valparaiso.<br />
+	
+	<li>El monumento funerario de los Reyes Católicos es obra de:</li>
+	<input type="radio" name="pregunta30" id="p301" value="A">Alonso Cano.<br /> 
+	<input type="radio" name="pregunta30" id="p302" value="B">Doménico Fancelli.<br />  
+	<input type="radio" name="pregunta30" id="p303" value="C">Martinez Montañez.<br />  
+	<input type="radio" name="pregunta30" id="p304" value="D">Sánchez Cotán.<br />
+	
+	<li>El tríptico de la pasión, obra de Dierick Bouts se encuentra en:</li>
+	<input type="radio" name="pregunta31" id="p311" value="A">La sacristía de la Capilla Real.<br /> 
+	<input type="radio" name="pregunta31" id="p312" value="B">Iglesia del Sagrario.<br />  
+	<input type="radio" name="pregunta31" id="p313" value="C">Catedral de Granada.<br />  
+	<input type="radio" name="pregunta31" id="p314" value="D">La curia.<br />
+	
+	<li>Cómo denominaban los cristianos la superficie donde se ubica el Carmen de los Mártires?</li>
+	<input type="radio" name="pregunta32" id="p321" value="A">Corral de los cautivos.<br /> 
+	<input type="radio" name="pregunta32" id="p322" value="B">Casa de los tiros.<br />  
+	<input type="radio" name="pregunta32" id="p323" value="C">Campo de los mártires.<br />  
+	<input type="radio" name="pregunta32" id="p324" value="D">Carmen de las flores.<br />
+	
+	<li>¿Cuando comienza a remodelarse el viejo, abigarrado e insano casco histórico granadino?</li>
+	<input type="radio" name="pregunta33" id="p331" value="A">Tras la expulsión de los moriscos.<br /> 
+	<input type="radio" name="pregunta33" id="p332" value="B">Durante el mandato de un alcalde afrancesado.<br />  
+	<input type="radio" name="pregunta33" id="p333" value="C">Siglo XVIII.<br />  
+	<input type="radio" name="pregunta33" id="p334" value="D">A finales del siglo XIX.<br />
+	
+	<li>¿Dónde se erigió la primera corte musulmana en el S XI?</li>
+	<input type="radio" name="pregunta34" id="p341" value="A">Alhambra.<br /> 
+	<input type="radio" name="pregunta34" id="p342" value="B">Alpujarra.<br />  
+	<input type="radio" name="pregunta34" id="p343" value="C">Albaycín.<br />  
+	<input type="radio" name="pregunta34" id="p344" value="D">Elvira.<br />
+	
+	<li>A su paso por la Carrera Darro el río Darro queda cruzado por dos puentes:</li>
+	<input type="radio" name="pregunta35" id="p351" value="A">Alhambreño y Albaycinero.<br /> 
+	<input type="radio" name="pregunta35" id="p352" value="B">Chino y Nuevo.<br />  
+	<input type="radio" name="pregunta35" id="p353" value="C">Seco y Vino.<br />  
+	<input type="radio" name="pregunta35" id="p354" value="D">Cabrera y Espinosa.<br />
+	
+	<li>Cruzando estos puentes se accede al:</li>
+	<input type="radio" name="pregunta36" id="p361" value="A">Barrio de la Buñuela.<br /> 
+	<input type="radio" name="pregunta36" id="p362" value="B">Barrio del Chavico.<br />  
+	<input type="radio" name="pregunta36" id="p363" value="C">Barrio de la Churra.<br />  
+	<input type="radio" name="pregunta36" id="p364" value="D">Barrio de los Claveles.<br />
+	
+	<li>El Monasterio de San Jerónimo:</li>
+	<input type="radio" name="pregunta37" id="p371" value="A">Es gótico.<br /> 
+	<input type="radio" name="pregunta37" id="p372" value="B">Es mozárabe.<br />  
+	<input type="radio" name="pregunta37" id="p373" value="C">Renacentista con claustro gótico.<br />  
+	<input type="radio" name="pregunta37" id="p374" value="D">Barroquista<br />
+	
+	<li>El monasterio de la Cartuja es:</li>
+	<input type="radio" name="pregunta38" id="p381" value="A">Prerrománico granadino.<br /> 
+	<input type="radio" name="pregunta38" id="p382" value="B">Barroco.<br />  
+	<input type="radio" name="pregunta38" id="p383" value="C">Renacentista tardío.<br />  
+	<input type="radio" name="pregunta38" id="p384" value="D">Gótico new age.<br />
+	
+	<li>En el Parque de las Ciencias, podremos visitar:</li>
+	<input type="radio" name="pregunta39" id="p391" value="A">Pabellón cultura de la prevención.<br /> 
+	<input type="radio" name="pregunta39" id="p392" value="B">Pabellón cultura del vino.<br />  
+	<input type="radio" name="pregunta39" id="p393" value="C">Pabellón cultura del ocio.<br />  
+	<input type="radio" name="pregunta39" id="p394" value="D">Pabellón miscellaneous.<br />
+	
+	<li>Si no tengo reloj, ni móvil y no hay nadie cerca para preguntar la hora,  ¿donde iré?</li>
+	<input type="radio" name="pregunta40" id="p401" value="A">A la sala Biosfera.<br /> 
+	<input type="radio" name="pregunta40" id="p402" value="B">A la torre de observación.<br />  
+	<input type="radio" name="pregunta40" id="p403" value="C">Al Jardín de la Astronomía.<br />  
+	<input type="radio" name="pregunta40" id="p404" value="D">Al Planetario.<br>	
+	</ul>
+	<br />			
+		
+		<div id="bou-result">		
+	<input id="botoncorregir" type="button"  name="boton" value=" Corregir " onclick="corregir()"/> 
+	<input id="botoncorregir" type="button" name="inform" value="Baremo" onclick="informa()"/>     
+	<input id="botoncorregir" type="Button" name="" value="Borrar" onClick="borrando(this.form)">
+	<a  href="#inicio" title="Inicio"><input id="botoncorregir" type="Button" value="Inicio"></a>
+     	 </div>
+
+	<div id="resultados">
+        Aciertos 
+	<input class="result" type="text" id="aciertos">Fallos<input class="result" type="text" id="fallos">Sin responder
+        <input class="result" type="text" id="blancos">Puntuación<input class="result" type="text" id="puntuacion" /> 
+        </div>
+				
+	
+	</form>	 
+
+	</section>   
+
+	<footer>
+    <p class="marque">phgwpi APPS</p>
+	</footer>   
+    
+    </body>
+    </html>
